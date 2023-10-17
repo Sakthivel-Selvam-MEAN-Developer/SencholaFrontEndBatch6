@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senchola Front-End | Batch 6</title>
+    <link rel="shortcut icon" href="./assets/s-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container d-flex">
+        <div class="youtube">
+            <div class="youtube-logo d-flex justify-space-between align-center">
+                <div class="youtube-icon">
+                    <img src="./assets/hamburger-menu-svgrepo-com (1).svg" alt="hamburger-icon">
+                    <a href="https://www.youtube.com" target="_blank">
+                        <img src="./assets/youtube.svg" alt="youtube-icon">
+                    </a>
+                </div>
+                <div class="search d-flex">
+                    <input type="search" placeholder="Search">
+                    <div class="search-icon">
+                        <img src="./assets/search-svgrepo-com.svg" alt="search-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="video">
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/4y33h81phKU?si=nLxh1DIO1O8sPlID&amp;controls=1"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <p>
+                    Hans Zimmer - Interstellar - Main Theme (Piano Version) + Sheet Music
+                </p>
+            </div>
+            <div class="video-components d-flex ">
+                <div class="video-views">
+                    <p>1.3M <small>views</small></p>
+                </div>
+                <div class="like align-center d-flex">
+                    <img src="./assets/like-svgrepo-com.svg" alt="like-icon" id="like">
+                    <label for="like">110K</label>
+                </div>
+                <div class="dislike d-flex align-center">
+                    <img src="./assets/like-svgrepo-com.svg" alt="dislike-icon" id="dislike">
+                    <label for="dislike">502</label>
+                </div>
+                <div class="share d-flex align-center">
+                    <img src="./assets/share-arrow-svgrepo-com.svg" alt="share-icon" id="share">
+                    <label for="share">Share</label>
+                </div>
+                <div class="add-playlist d-flex align-center">
+                    <img src="./assets/list-cross-svgrepo-com.svg" alt="add-playlist-icon">
+                </div>
+                <div class="more-icon">
+                    <img src="./assets/menu-dots-svgrepo-com.svg" alt="more-icon">
+                </div>
+            </div>
+            <hr>
+            <div class="channel d-flex align-center">
+                <div class="channel-left d-flex align-center">
+                    <div class="channel-logo">
+                        <img src="./assets/c3-logo.svg" alt="channel-logo">
+                    </div>
+                    <div class="channel-detail d-grid algin-center">
+                        <div class="channel-name d-flex">
+                            <p><b>ESPN</b></p>
+                            <img src="./assets/tick-circle-svgrepo-com.svg" alt="verified-icon">
+                        </div>
+                        <small>Published on Jun 2, 2019</small>
+                    </div>
+                </div>
+                <div class="subscribe d-flex align-center">
+                    <button id="subscribe" onclick="openForm()">SUBSCRIBE</button>
+                    <img src="./assets/bell-svgrepo-com.svg" alt="bell-icon">
+                </div>
+            </div>
+            <hr>
+            <div class="video-description">
+                <p>🎧 Stream/Download ► <a href="https://lnk.to/J1YYkH">https://lnk.to/J1YYkH</a> <br>
+
+                    🎵 Sheet Music ► <a href="http://mnot.es/2kntFGQ">http://mnot.es/2kntFGQ</a> <br>
+                    
+                    🎹 Learn piano with flowkey ► <a href="http://tinyurl.com/patrik-flowkey">http://tinyurl.com/patrik-flowkey</a> <br>
+                    <br>
+                    
+                    
+                    <span id="points">...</span>
+                    <span id="more-description">
+                        🎧 All My Music is Available Here 🎧
+                        ► Spotify: <a href=" https://lnk.to/PP_Spotify"> https://lnk.to/PP_Spotify</a> <br>
+                        
+                        ► Apple Music: <a href="https://lnk.to/PP_AppleMusic">https://lnk.to/PP_AppleMusic</a> <br>
+                        
+                        ► Amazon Music: <a href="https://lnk.to/PP_AmazonMusic">https://lnk.to/PP_AmazonMusic</a> <br>
+                        
+                        ► Deezer: <a href="https://lnk.to/PP_Deezer">https://lnk.to/PP_Deezer</a> <br>
+                        
+                        ► Tidal: <a href="https://lnk.to/PP_Tidal">https://lnk.to/PP_Tidal</a> <br>
+                        
+                        ► Pandora: <a href="https://lnk.to/PP_Pandora">https://lnk.to/PP_Pandora</a> <br>
+                        
+                        <br>
+                        Hans Zimmer - Interstellar - Main Theme <br>
+                        Piano Version by Patrik Pietschmann <br>
+                        <br>
+                        Hi, my name is Patrik Pietschmann, I'm a keyboard player, arranger and hobby programmer from Germany. Since I am a huge fan of Hans Zimmer, I did an arrangement of his Main Theme from the "Interstellar" soundtrack. In this video I have tried to combine my live piano playing with the visualization of the music material by programming my own "Synthesia"-like software.
+                        
+                        Please subscribe to my channel if you like the video! :-)
+                    </span>
+                </p>
+                <button onclick="toggleDescription()" id="loadButton">load more</button>
+            </div>
+        </div>
+        <div class="form" id="form">
+            <div class="title d-flex align-center">
+                <h3>Subscribe</h3>
+                <a href="#" onclick="cancelForm()">
+                    <img src="./assets/cancel-icon.svg" alt="cancel-icon">
+                </a>
+            </div>
+            <hr>
+            <form action="#" name="subscribe-form" onsubmit="formValidate(thi.form)">
+                <div class="salutation">
+                    <label for="salutation">Salutation</label>
+                    <select name="salutation" id="salutation">
+                        <option value="1">Mr</option>
+                        <option value="2">Ms</option>
+                        <option value="3">Mrs</option>
+                        <option value="4">Doc</option>
+                        <option value="5">Prof</option>
+                    </select>
+                </div>
+                <div class="firstname">
+                    <label for="firstname">Firstname :
+                        <input type="text" name="firstname" id="firstname" required>
+                    </label>
+                </div>
+                <div class="lastname">
+                    <label for="firstname">Lastname :
+                        <input type="text" name="lastname" id="lastname" required>
+                    </label>
+                </div>
+                <div class="gender">
+                    <label for="gender"> Gender :
+                        <label for="male">
+                            <input type="radio" name="gender" id="male" checked>
+                            Male
+                        </label>
+                        <label for="female">
+                            <input type="radio" name="gender" id="female">
+                            Female
+                        </label>
+                        <label for="not-disclosed">
+                            <input type="radio" name="gender" id="not-disclosed">
+                            Not-Discloseed
+                        </label>
+                    </label>
+                </div>
+                <div class="mail">
+                    <label for="mail"> Email :
+                        <input type="email" name="mail" id="mail" required>
+                    </label>
+                </div>
+                <div class="dob">
+                    <label for="dob"> Date of Birth :
+                        <input type="date" name="dob" id="dob" required>
+                    </label>
+                </div>
+                <div class="address">
+                    <label for="address">Address : <br>
+                        <textarea name="address" id="address" cols="30" rows="5" required></textarea>
+                    </label>
+                </div>
+                <input type="submit" value="Submit" onclick="onSubmitForm(this.form)">
+            </form>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
