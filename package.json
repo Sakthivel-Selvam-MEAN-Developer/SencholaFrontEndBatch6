@@ -1,0 +1,17 @@
+{
+  "name": "youtube-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy":"gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage":"https://Sakthivel-Selvam-MEAN-Developer.io/",
+  "dependencies": {
+    "gh-pages": "^6.0.0"
+  }
+}
